@@ -11,7 +11,7 @@ app.use('/', (req, res) => {
     res.send("Server is running!334242")
 })
 
-app.get('/user', async (req, res) => {
+app.use('/user', async (req, res) => {
     try {
         // Пример простого запроса для проверки соединения
         const count = await prisma.user.count();  // Замените 'user' на имя вашей модели
