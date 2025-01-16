@@ -24,9 +24,7 @@ function App() {
     <div className="App">
       <h1>Данные с сервера</h1>
       <ul>
-        {data.map((item, index) => (
-          <li key={index}>{item.name}</li>  // адаптируй в зависимости от данных
-        ))}
+          <li>{data}</li>
       </ul>
     </div>
   );
