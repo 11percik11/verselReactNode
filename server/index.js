@@ -1,8 +1,6 @@
 const express = require('express')
 const app = express()
 const cors = require('cors');
-const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
 
 app.use(cors());  // Разрешаем запросы с любых источников
 app.use(express.json());
