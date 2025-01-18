@@ -4,13 +4,13 @@ const cors = require('cors');
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-const corsOptions = {
-    origin: 'https://versel-react-node-client-ixpstt76w-11percik11s-projects.vercel.app', // замените на ваш клиентский домен
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // список методов, которые разрешены
-    credentials: true, // если нужно разрешить работу с куками
-  };
+// const corsOptions = {
+//     origin: 'https://versel-react-node-client-ixpstt76w-11percik11s-projects.vercel.app', // замените на ваш клиентский домен
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'], // список методов, которые разрешены
+//     credentials: true, // если нужно разрешить работу с куками
+//   };
   
-  app.use(cors(corsOptions)); // Разрешаем запросы с любых источников
+app.use(cors()); // Разрешаем запросы с любых источников
 app.use(express.json());
 
 app.listen(5000, console.log("Server run on port 5000."))
