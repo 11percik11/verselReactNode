@@ -3,7 +3,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 
 function App() {
-  // const [data, setData] = useState(null);  // Теперь data и user - это объекты, а не массивы
+  const [data, setData] = useState(null);  // Теперь data и user - это объекты, а не массивы
   const [user, setUser] = useState();
 
   // Функция для получения данных с бекенда
@@ -25,14 +25,14 @@ function App() {
   //   }
   // };
 
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await axios.get('http://localhost:5000/task');
-  //     setData(response.data);  // Сохраняем ответ в состояние
-  //   } catch (error) {
-  //     console.error('Ошибка при получении данных:', error);
-  //   }
-  // };
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('https://versel-react-node-mongo.vercel.app/task');
+      setData(response.data);  // Сохраняем ответ в состояние
+    } catch (error) {
+      console.error('Ошибка при получении данных:', error);
+    }
+  };
 
 
 
@@ -47,7 +47,7 @@ function App() {
   };
 
   useEffect(() => {
-    // fetchData();
+    fetchData();
     fetchUser();
   }, []);
 
@@ -57,7 +57,7 @@ function App() {
       <ul>
         {/* Теперь выводим значения из объектов */}
         <li>{user}</li>
-        {/* <li>{data ? `${data.message} ${data.count}` : 'Загрузка данных для User...'}</li> */}
+        <li>{data ? `${data.message} ${data.count}` : 'Загрузка данных для User...'}</li>
       </ul>
     </div>
   );
