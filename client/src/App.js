@@ -34,9 +34,12 @@ function App() {
   //   }
   // };
 
+
+
+  // https://versel-react-node-mongo.vercel.app/
   const fetchUser = async () => {
     try {
-      const userData = await axios.get('https://versel-react-node-mongo-jw9cucvaf-11percik11s-projects.vercel.app/user');
+      const userData = await axios.get('https://versel-react-node-mongo.vercel.app/user');
       setUser(userData.data);  // Сохраняем ответ в состояние
     } catch (error) {
       console.error('Ошибка при получении данных:', error);
