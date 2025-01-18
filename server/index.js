@@ -11,7 +11,7 @@ app.listen(5000, console.log("Server run on port 5000."))
 
 app.use('/', require('./router'))
 
-
+// DATABASE_URL="mongodb+srv://rebi7dan:tACBoDVIT1MZV8tQ@cluster0.asqu8.mongodb.net/vercel1?retryWrites=true&w=majority"
 // app.use('/', async (req, res) => {
 //     try {
 //         // Пример простого запроса для проверки соединения
@@ -21,3 +21,6 @@ app.use('/', require('./router'))
 //         res.status(500).json({ error: 'Ошибка соединения с базой данных' });
 //       }
 // });
+
+
+
