@@ -9,7 +9,7 @@ function App() {
   // Функция для получения данных с бекенда
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://versel-react-node-dev.vercel.app');
+      const response = await axios.get('https://versel-react-node-mongo-jw9cucvaf-11percik11s-projects.vercel.app/user');
       setData(response.data);
     } catch (error) {
       console.error('Ошибка при получении данных:', error);
@@ -18,7 +18,7 @@ function App() {
 
   const fetchUser = async () => {
     try {
-      const userData = await axios.get('https://versel-react-node-dev.vercel.app/task');
+      const userData = await axios.get('https://versel-react-node-mongo-jw9cucvaf-11percik11s-projects.vercel.app/task');
       setUser(userData.data);
     } catch (error) {
       console.error('Ошибка при получении данных:', error);
